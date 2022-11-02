@@ -1,0 +1,70 @@
+
+KMS : Key Management Service : AWS Key Management Service (KMS) gives you centralized control over the cryptographic keys used to protect your data. 
+                               The service is integrated with other AWS services making it easy to encrypt data you store in these services and 
+                               control access to the keys that decrypt it.
+
+
+--> SSE (Server Side Encryption) / At-rest : 
+
+SSE-S3 : S3 platform generates and manages the key material. whoever have valid access on S3 platform can decrypt/view the data. (An encryption key that Amazon S3 creates, manages, and uses for you).
+
+SSE-KMS : Key Management Service : 
+	  KMS (AWS managed keys) (aws/s3) DMK(Default Master Key) : KMS Service generates and manages the key material. whoever have valid access on S3 platform can decrypt/view the data. We cannot delete these keys. 
+	  CMK (Customer managed keys) : KMS Service generates and manages the keymaterial.
+Along with S3 platform, the IAM user need to have valid permissions on ENCRYPTION KEY also. NO FREE TIER ELIGIBILITY.
+	SSE-C (Customer Provided Key): Customer generates and upload the key material to KMS and KMS uses this key material to encrypt/decrypt the data. CUstomer can change the key material at any time. NO FREE TIER ELIGIBILITY.
+
+-->Benefits of AWS KMS:
+
+AWS KMS provides you with centralized control over the encryption keys to protect your data. 
+It empowers developers to attach encryption functionality easily to their application code directly using encrypt and decrypt service APIs or through integrating with the AWS Encryption SDK. 
+
+Here is the list of the main benefits of AWS KMS:
+
+-->It is fully managed: This AWS Key Management Service is considered as the fully managed service, which mainly helps to focus on encryption needs of various applications in the technology. 
+                        It also helps to deliver physical security, availability, and also maintaining of different hardware components in a full-fledged manner.
+
+-->Centralized Key Management: AWS KMS will provide you with all the rights of the centralized control of the respective encryption keys. 
+                               It will show the complete details of the key usage in the organization to boost revenues. 
+                               Users can also create, rotate keys and import keys along with the correct definition usage of the policies. Users can also audit the usage from the AWS Management Console or with the help of CLI or else AWS SDK.
+
+-->Integrated with AWS Service: In a bid to ensure the smooth process to encrypt data that you store with the help of some services, 
+                                this AWS KMS is also integrated with different other AWS Services. 
+
+-->Encryption for all your applications: AWS KMS will help you to manage encryption keys effectively and will also be used to store the applications without revealing their storage details.
+
+-->Built-in Auditing: AWS Key Management Service will make sure to work with AWS CloudTrail to ensure API calls logs are ready to or else by KMS. 
+                                         Users can also know the details of the keys that are accessed or not and the person who accessed them with the help of these logs that meet compliance and regulatory requirements.
+
+-->Low-cost: In your respective account, there will be no particular charges for the default keys. 
+             The extra cost will only be paid for the master keys which you will use for key usage or else for creation purposes.
+
+-->Security: Amazon Web Services KMS makes sure to deliver or give the most secure place to store or else to use the encryption key. 
+             The key, such as FIPS 140-2, will be used for the security modules to store the encrypted keys that you will be using to save a substantial amount of data.
+
+-->Compliance: The quality controls and the security modules which are presented in KMS have been approved and also given a certification in which they are accomplished with a compliance scheme.
+
+
+
+Encryption key generation : 
+--> Choose key type : Symmetric /Asymetric
+--> Choose key Administrator
+--> Choose Key Users
+--> Review and create
+
+
+
+Conclusion:
+Now, you have got a grasp of the primary theories behind KMS and also implementing encryption mechanisms for the project. 
+It is a critical thing controlling the security breaches occurring all the time. KMS offers data scrambling, so only the owner of the key or password can read it. 
+This protects data confidentiality so that if an unauthorized person gained access to the service or the storage device, they would be unable to see the data. 
+It also protects the data integrity so that it cannot tamper without the owner’s knowledge.
+
+
+
+
+
+
+
+
+
